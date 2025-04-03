@@ -1,9 +1,14 @@
-// sample.cpp
+#include "ClapTrap.hpp"
 
-#include <iostream>
+int main() {
+  ClapTrap robot("Robo");
 
-int main()
-{
-  std::cout << "Hello, World!" << std::endl;
+  robot.attack("Enemy");
+  robot.takeDamage(5);
+  robot.beRepaired(3);
+  robot.attack("Enemy");
+  robot.takeDamage(10);
+  robot.beRepaired(5);
+
   return 0;
 }
