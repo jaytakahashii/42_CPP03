@@ -20,6 +20,7 @@ CXXFLAGS		= -Wall -Wextra -Werror -std=c++98
 WSHADOW			= -Wshadow
 WNO_SHADOW	= -Wno-shadow
 PEDANT			= -pedantic
+SANITIZE		= -fsanitize=address -g3
 
 RM					= rm -rf
 
@@ -77,4 +78,8 @@ pedant: CXXFLAGS += $(PEDANT)
 pedant: re
 	@echo $(G) "pedantic mode activated.\n" $(X)
 
-.PHONY: all clean fclean re
+leaks: CXXFLAGS += $(SANITIZE)
+leaks: re
+	@echo $(G) "leaks mode activated.\n" $(X)
+
+.PHONY: all clean fclean re pedant leaks shadow no-shadow
