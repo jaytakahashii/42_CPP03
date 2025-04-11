@@ -8,7 +8,6 @@ int main() {
   scav.guardGate();
   scav.takeDamage(30);
   scav.beRepaired(20);
-  scav.attack("Enemy2");
 
   return 0;
 }

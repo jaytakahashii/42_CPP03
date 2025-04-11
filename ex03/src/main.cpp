@@ -1,26 +1,17 @@
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main() {
-  ClapTrap clap("CL4P-TP");
-  ScavTrap scav("SC4V-TP");
-  FragTrap frag("FR4G-TP");
+  DiamondTrap dt("DIAMOND");
 
-  clap.attack("Bandit");
-  scav.attack("Psycho");
-  frag.attack("Raid Boss");
+  dt.whoAmI();
 
-  clap.takeDamage(5);
-  scav.takeDamage(20);
-  frag.takeDamage(50);
+  dt.attack("TargetBot");
 
-  clap.beRepaired(3);
-  scav.beRepaired(15);
-  frag.beRepaired(40);
+  dt.takeDamage(5);
+  dt.beRepaired(3);
 
-  scav.guardGate();
-  frag.highFivesGuys();
+  dt.highFivesGuys();
+  dt.guardGate();
 
   return 0;
 }
