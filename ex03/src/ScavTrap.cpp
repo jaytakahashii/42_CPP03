@@ -1,10 +1,35 @@
 #include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap() : ClapTrap() {
+  _hitPoints = 100;
+  _energyPoints = 50;
+  _attackDamage = 20;
+  std::cout << "ScavTrap " << _name << " constructed!" << std::endl;
+}
+
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
   _hitPoints = 100;
   _energyPoints = 50;
   _attackDamage = 20;
   std::cout << "ScavTrap " << _name << " constructed!" << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other) {
+  _hitPoints = other._hitPoints;
+  _energyPoints = other._energyPoints;
+  _attackDamage = other._attackDamage;
+  std::cout << "ScavTrap " << _name << " copied!" << std::endl;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
+  if (this != &other) {
+    _name = other._name;
+    _hitPoints = other._hitPoints;
+    _energyPoints = other._energyPoints;
+    _attackDamage = other._attackDamage;
+  }
+  std::cout << "ScavTrap " << _name << " assigned!" << std::endl;
+  return *this;
 }
 
 ScavTrap::~ScavTrap() {
