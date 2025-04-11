@@ -20,3 +20,7 @@ void DiamondTrap::whoAmI() {
   std::cout << BLUE "I am " << _name << ", and my ClapTrap name is "
             << ClapTrap::_name << "!" RESET << std::endl;
 }
+
+void DiamondTrap::attack(const std::string &target) {
+  ScavTrap::attack(target);
+}

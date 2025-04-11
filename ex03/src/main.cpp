@@ -1,15 +1,17 @@
 #include "DiamondTrap.hpp"
 
 int main() {
-  DiamondTrap diamond("DI4M-TP");
+  DiamondTrap dt("DIAMOND");
 
-  diamond.attack("Enemy");
-  diamond.takeDamage(30);
-  diamond.beRepaired(20);
+  dt.whoAmI();
 
-  diamond.guardGate();
-  diamond.highFivesGuys();
-  diamond.whoAmI();
+  dt.attack("TargetBot");
+
+  dt.takeDamage(5);
+  dt.beRepaired(3);
+
+  dt.highFivesGuys();
+  dt.guardGate();
 
   return 0;
 }
