@@ -9,7 +9,8 @@ INCLUDE_DIR	= include/
 INCLUDE			= -I $(INCLUDE_DIR)
 HEADERS			= ClapTrap.hpp \
 							ScavTrap.hpp \
-							FragTrap.hpp
+							FragTrap.hpp \
+							color.hpp
 HEADER			= $(addprefix $(INCLUDE_DIR), $(HEADERS))
 
 DEPS				= $(HEADER) $(MAKEFILE)

@@ -8,7 +8,8 @@ OBJ_DIR			= .obj/
 INCLUDE_DIR	= include/
 INCLUDE			= -I $(INCLUDE_DIR)
 HEADERS			= ClapTrap.hpp \
-							ScavTrap.hpp
+							ScavTrap.hpp \
+							color.hpp
 HEADER			= $(addprefix $(INCLUDE_DIR), $(HEADERS))
 
 DEPS				= $(HEADER) $(MAKEFILE)
