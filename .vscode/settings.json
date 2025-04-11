@@ -3,5 +3,6 @@
     "Aaaaand",
     "Scav",
     "WSHADOW"
-  ]
+  ],
+  "C_Cpp.errorSquiggles": "disabled"
 }
