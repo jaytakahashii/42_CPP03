@@ -32,9 +32,10 @@ void ClapTrap::takeDamage(unsigned int amount) {
               << std::endl;
     return;
   }
-  if (amount >= UINT_MAX - _hitPoints) {
-    std::cout << RED "ClapTrap " << _name
-              << "'s hit points reached zero and he is down!" RESET
+  if (_hitPoints <= amount) {
+    std::cout << RED "ClapTrap " << _name << " takes " << amount
+              << " points of damage! He's hit points reached zero and he is "
+                 "down!" RESET
               << std::endl;
     _hitPoints = 0;
     return;
@@ -58,8 +59,9 @@ void ClapTrap::beRepaired(unsigned int amount) {
     return;
   }
   _energyPoints--;
-  if (UINT_MAX >= _hitPoints + amount) {
-    std::cout << GREEN "ClapTrap " << _name << "'s hit points reached maximum ("
+  if (_hitPoints >= UINT_MAX - amount) {
+    std::cout << GREEN "ClapTrap " << _name
+              << " repairs itself, and he's hit points reached maximum ("
               << UINT_MAX << ")" RESET << std::endl;
     _hitPoints = UINT_MAX;
     return;
