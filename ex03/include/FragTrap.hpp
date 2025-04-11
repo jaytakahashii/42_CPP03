@@ -6,6 +6,5 @@ class FragTrap : virtual public ClapTrap {
  public:
   FragTrap(std::string name);
   ~FragTrap();
-
   void highFivesGuys();
 };

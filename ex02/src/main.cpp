@@ -3,9 +3,9 @@
 #include "ScavTrap.hpp"
 
 int main() {
-  ClapTrap clap("CL4P-TP");
-  ScavTrap scav("SC4V-TP");
-  FragTrap frag("FR4G-TP");
+  ClapTrap clap("CL");
+  ScavTrap scav("SC");
+  FragTrap frag("FR");
 
   clap.attack("Bandit");
   scav.attack("Psycho");
