@@ -1,5 +1,7 @@
 #pragma once
 
+#include <limits.h>
+
 #include <iostream>
 #include <string>
 
