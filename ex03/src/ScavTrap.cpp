@@ -23,10 +23,7 @@ ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other) {
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
   if (this != &other) {
-    _name = other._name;
-    _hitPoints = other._hitPoints;
-    _energyPoints = other._energyPoints;
-    _attackDamage = other._attackDamage;
+    ClapTrap::operator=(other);
   }
   std::cout << "ScavTrap " << _name << " assigned!" << std::endl;
   return *this;
